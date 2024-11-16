@@ -11,6 +11,7 @@ import NovaSenha from "./components/NovaSenha";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import SidebarEquitador from "./components/equitador/SidebarEquitador.js";
 import ListarEquino from "./components/equitador/ListarEquino.js";
+import TelaSessao from './components/SessaoIndividual.js';
 
 function App() {
   return (
@@ -46,6 +47,19 @@ function App() {
               </div>
             }
           />
+
+            <Route
+              path="/SessaoIndividual"
+              element={
+                <div className="app-content">
+                  <Sidebar />
+                  <TelaSessao />
+                </div>
+
+              }
+          />
+
+
           <Route
             path="/equitador/"
             element={
