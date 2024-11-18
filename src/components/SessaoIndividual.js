@@ -1,5 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import './FotoEstilo.css';
+import foto from "./imgs/foto.jpg"
+import BotaoEfeito  from './BotaoEfeito';
+import BotaoVerde from './BotaoArredondado';
 
 const TelaSessao = () => {
   
@@ -11,24 +14,32 @@ const TelaSessao = () => {
       </div>
 
       {/* Informações do Participante */}
-      <div style={estilos.participantInfo}>
-      <img src="/imgs/pessoa.jpg" alt="" />
-      <div>
+      <div style={{ display: 'flex', gap: '10px' }}>
+        <img src={foto} alt="foto" title="foto" className="rounded-photo" />
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <div>
+            <h3 style={{ color: '#07C158' }}>Ana Silva Barbosa</h3>
+          </div>
+        <strong>Horário da sessão:
+        </strong> 14:30 – 15:30
+        </div>
+        </div>
+          
+          <p>12 anos</p>
+           
+          
           <h3>Ana Silva Barbosa</h3>
           <p>12 anos</p>
-          <button style={estilos.finishSessionButton}>Finalizar Sessão</button>
-        </div>
-      </div>
+          
+        <BotaoVerde texto="Finalisar Sessão" to="/FinalizarSessao" />
+        <strong>Data:</strong> 15/11/24
+          
+          
+        
+      
 
       {/* Detalhes da Sessão */}
-      <div style={estilos.sessionDetails}>
-        <div>
-          <strong>Horário da sessão:</strong> 14:30 – 15:30
-        </div>
-        <div>
-          <strong>Data:</strong> 15/11/24
-        </div>
-      </div>
+     
 
       {/* Navegação em Abas */}
      
@@ -36,35 +47,12 @@ const TelaSessao = () => {
       {/* Botão com texto */}
     
     </div>
-    <Link to="/outra-pagina" style={{ textDecoration: 'none' }}>
-      <button
-        style={styles.button}
-        onMouseOver={handleMouseOver}  // Aciona o hover
-        onMouseOut={handleMouseOut}    // Retira o hover
-      >
-        Detalhes da Sessão
-      </button>
-    </Link>
-
-    <Link to="/outra-pagina" style={{ textDecoration: 'none' }}>
-      <button
-        style={styles.button}
-        onMouseOver={handleMouseOver}  // Aciona o hover
-        onMouseOut={handleMouseOut}    // Retira o hover
-      >
-        Informações do Praticante
-      </button>
-    </Link>
-
-    <Link to="/outra-pagina" style={{ textDecoration: 'none' }}>
-      <button
-        style={styles.button}
-        onMouseOver={handleMouseOver}  // Aciona o hover
-        onMouseOut={handleMouseOut}    // Retira o hover
-      >
-        Feedback da Sessão Anterior
-      </button>
-    </Link>
+    <div>
+      {""}
+      <BotaoEfeito texto="Detalhes da Sessão" to="/detalhes-sessao" />
+      <BotaoEfeito texto="Informações do Praticante" to="/informacoes-praticante" />
+      <BotaoEfeito texto="Feedback da Sessão Anterior" to="/feedback-sessao" />
+    </div>
 
 
       {/* Observações Gerais */}
@@ -88,30 +76,7 @@ const TelaSessao = () => {
         <p><strong>Cavalo:</strong> Thor, baixo, temperamento calmo</p>
       </div>
     </div>
-  );
-};
-const styles = {
-  button: {
-    backgroundColor: 'transparent',  // Torna o fundo transparente
-    border: 'none',  // Remove a borda
-    color: 'black',  // Cor do texto
-    fontSize: '16px',  // Tamanho da fonte
-    cursor: 'pointer',  // Mostra o cursor como pointer
-    padding: '5px 10px',  // Espaçamento interno do botão
-    textDecoration: 'none',  // Remove o sublinhado do texto
-    borderBottom: '2px solid transparent',  // Borda inferior transparente inicialmente
-    transition: 'border-bottom 0.3s ease',  // Transição suave para a borda inferior
-  },
-  buttonHover: {
-    borderBottom: '2px solid green',  // Cor verde da faixa abaixo do texto
-  }
-};
-const handleMouseOver = (e) => {
-  e.target.style.borderBottom = styles.buttonHover.borderBottom; // Muda a cor da borda ao passar o mouse
-};
-
-const handleMouseOut = (e) => {
-  e.target.style.borderBottom = styles.button.borderBottom; // Volta para a borda transparente ao tirar o mouse
+  )
 };
 // Estilos
 const estilos = {
