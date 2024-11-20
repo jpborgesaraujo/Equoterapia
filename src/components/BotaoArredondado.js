@@ -7,7 +7,7 @@ const BotaoVerde = ({ texto, to }) => {
       backgroundColor: "#07C158",  // Cor de fundo verde
       border: 'none',            // Sem borda
       color: 'white',            // Cor do texto branco
-      fontSize: '16px',          // Tamanho da fonte
+      fontSize: '14px',          // Tamanho da fonte
       padding: '10px 20px',      // Espaçamento interno
       borderRadius: '50px',      // Bordas arredondadas
       cursor: 'pointer',        // Cursor de pointer ao passar por cima

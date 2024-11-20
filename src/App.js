@@ -11,7 +11,11 @@ import NovaSenha from "./components/NovaSenha";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import SidebarEquitador from "./components/equitador/SidebarEquitador.js";
 import ListarEquino from "./components/equitador/ListarEquino.js";
-import TelaSessao from './components/SessaoIndividual.js';
+import FeedbackSessaoAnterior from "./components/FeedbackSessaoAnterior.js";
+import CabecalhoSessao from "./components/CabecalhoSessao.js";
+import DetalhesSessao from "./components/detalhes-sessao.js"
+import ImformacoesPraticante from "./components/InformacoesPraticante.js";
+
 
 function App() {
   return (
@@ -48,12 +52,54 @@ function App() {
             }
           />
 
+          <Route
+            path="/feedback-sessao"
+            element={
+              <div className="app-content">
+                <Sidebar />
+                <div className="content">
+                  <FeedbackSessaoAnterior />
+                </div>
+              </div>
+            }
+          />
+
             <Route
-              path="/SessaoIndividual"
+              path="/detalhes-sessao"
               element={
                 <div className="app-content">
                   <Sidebar />
-                  <TelaSessao />
+
+                  <div className="content">
+                  <DetalhesSessao />
+                  </div>
+                  
+                  
+                </div>
+
+              }
+          />
+
+            <Route
+              path="/informacoes-praticante"
+              element={
+                <div className="app-content">
+                  <Sidebar />
+                  <div className="content">
+                    <ImformacoesPraticante />
+                  </div>
+                </div>
+              }
+            />
+
+
+            <Route
+              path="/detalhes-sessao"
+              element={
+                <div className="app-content">
+                  <Sidebar />
+                  <CabecalhoSessao/>
+                  
                 </div>
 
               }
