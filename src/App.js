@@ -15,7 +15,7 @@ import FeedbackSessaoAnterior from "./components/FeedbackSessaoAnterior.js";
 import CabecalhoSessao from "./components/CabecalhoSessao.js";
 import DetalhesSessao from "./components/detalhes-sessao.js"
 import ImformacoesPraticante from "./components/InformacoesPraticante.js";
-
+import SidebarAdm from "./components/SidebarAdm.js";
 
 function App() {
   return (
@@ -99,6 +99,21 @@ function App() {
                 <div className="app-content">
                   <Sidebar />
                   <CabecalhoSessao/>
+                  
+                </div>
+
+              }
+          />
+
+            <Route
+              path="/SidebarAdm"
+              element={
+                <div className="app-content">
+                  <div className="content">
+                  <SidebarAdm />
+                  </div>
+                  
+                  
                   
                 </div>
 

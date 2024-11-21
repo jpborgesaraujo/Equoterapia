@@ -2,11 +2,9 @@ import React from 'react';
 import CabecalhoSessao from './CabecalhoSessao';
 
 const DetalhesSessao = () => {
-  // Configure os tamanhos das letras aqui
-  const tamanhoTituloVerde = '16px';  // Altere este valor para mudar o tamanho dos títulos verdes
-  const tamanhoTextoPreto = '16px';   // Altere este valor para mudar o tamanho dos textos pretos
+  const tamanhoTituloVerde = '16px';
+  const tamanhoTextoPreto = '16px';
 
-  // Dados que virão do banco de dados
   const dadosSessao = {
     condutor: "João Silva",
     mediadores: ["Ana Souza", "Pedro Almeida"],
@@ -28,7 +26,7 @@ const DetalhesSessao = () => {
         </div>
 
         <div style={estilos.section}>
-          <h4 style={{...estilos.tituloVerde, fontSize: tamanhoTituloVerde}}>Observações para a sessão</h4>
+          <h4 style={{...estilos.tituloVerde, fontSize: tamanhoTituloVerde, fontWeight: 'bold'}}>Observações para a sessão</h4>
           <p style={{...estilos.textoPreto, fontSize: tamanhoTextoPreto}}>{dadosSessao.observacoes}</p>
         </div>
       </div>

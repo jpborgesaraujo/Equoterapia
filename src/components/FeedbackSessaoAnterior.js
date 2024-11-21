@@ -5,7 +5,6 @@ const FeedbackSessaoAnterior = () => {
   const tamanhoTituloVerde = '14px';
   const tamanhoTextoPreto = '16px';
 
-  // Dados que virão do banco de dados
   const dadosFeedback = {
     observacoesGerais: "Houve uma participação ativa nas atividades, com boa coordenação durante os exercícios de equilíbrio...",
     observacoesProximaSessao: "Será necessário incluir atividades de guia mais simples e aumentar o tempo de interação com o cavalo...",
@@ -20,20 +19,18 @@ const FeedbackSessaoAnterior = () => {
       <CabecalhoSessao />
       
       <div style={estilos.contentContainer}>
-        {/* Observações Gerais */}
         <div style={estilos.section}>
-          <h4 style={{...estilos.tituloVerde, fontSize: tamanhoTituloVerde}}>Observações Gerais</h4>
+          <h4 style={{...estilos.tituloVerde, fontSize: tamanhoTituloVerde, fontWeight: 'bold'}}>Observações Gerais</h4>
           <p style={{...estilos.textoPreto, fontSize: tamanhoTextoPreto}}>{dadosFeedback.observacoesGerais}</p>
         </div>
 
-        {/* Observações para a Próxima Sessão */}
         <div style={estilos.section}>
-          <h4 style={{...estilos.tituloVerde, fontSize: tamanhoTituloVerde}}>Observações para a Próxima Sessão</h4>
+          <h4 style={{...estilos.tituloVerde, fontSize: tamanhoTituloVerde, fontWeight: 'bold'}}>Observações para a Próxima Sessão</h4>
           <p style={{...estilos.textoPreto, fontSize: tamanhoTextoPreto}}>{dadosFeedback.observacoesProximaSessao}</p>
         </div>
 
-        {/* Equipe */}
         <div style={estilos.section}>
+          <h4 style={{...estilos.tituloVerde, fontSize: tamanhoTituloVerde, fontWeight: 'bold'}}>Equipe</h4>
           <p style={{...estilos.textoPreto, fontSize: tamanhoTextoPreto}}><strong>Condutor:</strong> {dadosFeedback.condutor}</p>
           <p style={{...estilos.textoPreto, fontSize: tamanhoTextoPreto}}><strong>Mediador(es):</strong> {dadosFeedback.mediadores.join(", ")}</p>
           <p style={{...estilos.textoPreto, fontSize: tamanhoTextoPreto}}><strong>Encilhamento:</strong> {dadosFeedback.encilhamento}</p>

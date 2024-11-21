@@ -7,10 +7,18 @@ import gear from './imgs/gear.png';
 import { Link } from 'react-router-dom';
 
 const CabecalhoSessao = (props) => {
+  const dadosSessao = {
+    numeroSessao: "1",
+    status: "Aberta",
+    idade: "12 anos",
+    horario: "14:30 – 15:30",
+    data: "15/11/24"
+  };
+
   return (
     <>
       <div style={estilos.header}>
-        <h2>Sessão 1 - <span style={estilos.status}>Aberta</span></h2>
+        <h2>Sessão {dadosSessao.numeroSessao} - <span style={estilos.status}>{dadosSessao.status}</span></h2>
       </div>
       <div>
         <div style={{ display: 'flex', gap: '10px' }}>
@@ -19,14 +27,14 @@ const CabecalhoSessao = (props) => {
             <div style={{ display: 'flex', gap: '50px', alignItems: 'flex-start' }}>
               <div>
                 <h3 style={{ color: '#07C158', margin: '0' }}>Ana Silva Barbosa</h3>
-                <p style={{ margin: '5px 0' }}>12 anos</p>
+                <p style={{ margin: '5px 0' }}>{dadosSessao.idade}</p>
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
                 <div>
-                  <strong>Horário da sessão: </strong>14:30 – 15:30
+                  <strong>Horário da sessão: </strong>{dadosSessao.horario}
                 </div>
                 <div style={{ marginTop: '5px' }}>
-                  <strong>Data: </strong>15/11/24
+                  <strong>Data: </strong>{dadosSessao.data}
                 </div>
               </div>
             </div>

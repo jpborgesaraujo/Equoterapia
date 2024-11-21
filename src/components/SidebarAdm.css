@@ -1,0 +1,107 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.SidebarAdm {
+    width: 350px;
+    height: 100vh;
+    background-color: #f8f9fa;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+}
+
+.SidebarAdm-toggle {
+    display: none;
+    /* Escondido por padrão */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    z-index: 1000;
+    color: #333;
+}
+
+.exit-button {
+    background: none;
+    border: none;
+    outline: none;
+    color: inherit;
+    font-size: 16px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    gap: 8px;
+    margin-top: 40px;
+}
+
+.exit-icon {
+    font-size: 25px;
+}
+
+.username {
+    color: #4E3B31;
+    text-align: center;
+}
+
+.SidebarAdm-button {
+    height: 50px;
+    width: 100%;
+    background-color: #e2e6ea;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.SidebarAdm-button .arrow {
+    position: absolute;
+    right: 10px;
+}
+
+.active-button {
+    background-color: #4E3B31;
+    color: white;
+}
+
+.profile-pic {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-pic img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .SidebarAdm {
+        width: 100%;
+        height: 100%;
+        transform: translateX(-100%);
+        position: fixed;
+        /* Esconde a SidebarAdm fora da tela */
+    }
+
+    .SidebarAdm.open {
+        transform: translateX(0);
+        /* Mostra a SidebarAdm */
+    }
+
+    .SidebarAdm-toggle {
+        display: block;
+        /* Mostra o botão de menu em telas pequenas */
+    }
+}

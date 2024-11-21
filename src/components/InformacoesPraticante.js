@@ -5,7 +5,6 @@ const InformacoesPraticante = () => {
   const tamanhoTituloVerde = '14px';
   const tamanhoTextoPreto = '16px';
 
-  // Dados que virão do banco de dados
   const dadosPraticante = {
     nomeCompleto: "João Pedro Martins",
     sexo: "Masculino", 
@@ -20,21 +19,22 @@ const InformacoesPraticante = () => {
     nomeMae: "Maria Fernanda Martins"
   };
 
-  const dadosFeedback = {
-    observacoesProximaSessao: "Será necessário incluir atividades de guia mais simples e aumentar o tempo de interação com o cavalo...",
-    condutor: "João Silva",
-    mediadores: ["Ana Souza", "Pedro Almeida"],
-    encilhamento: "Completo, com manta e estribo ajustados",
-    cavalo: "Thor, baixo, temperamento calmo"
+  const dadosEscolaridade = {
+    escola: "Escola Bernardo Sayão (Privada)",
+    anoSerie: "Ensino Fundamental – 2º ano",
+    turma: "Inclusão",
+    periodo: "Matutino"
   };
+
+  const diagnosticoClinico = "João Pedro apresenta diagnóstico de Transtorno do Déficit de Atenção com Hiperatividade (TDAH), caracterizado por sintomas de desatenção, impulsividade e hiperatividade. Esses sintomas afetam tanto o desempenho escolar quanto as interações sociais, além de dificultarem o foco em atividades cotidianas.\n\nNo campo motor, João apresenta dificuldades leves de coordenação e equilíbrio, que foram notadas desde a primeira infância. Atraso no desenvolvimento motor foi relatado pelos pais, com dificuldades iniciais em caminhar e manter-se estável sem apoio até aproximadamente 2 anos e meio.\n\nAtualmente, essas dificuldades refletem-se na capacidade de realizar atividades físicas que demandam maior controle postural e coordenação motora fina.";
 
   return (
     <div style={estilos.container}>
       <CabecalhoSessao />
       
       <div style={estilos.contentContainer}>
-        {/* Dados do Praticante */}
         <div style={estilos.section}>
+          <h4 style={{...estilos.tituloVerde, fontSize: tamanhoTituloVerde, fontWeight: 'bold'}}>Dados de Identificação</h4>
           <p style={{...estilos.textoPreto, fontSize: tamanhoTextoPreto}}><strong>Nome Completo:</strong> {dadosPraticante.nomeCompleto}</p>
           <p style={{...estilos.textoPreto, fontSize: tamanhoTextoPreto}}><strong>Sexo:</strong> {dadosPraticante.sexo}</p>
           <p style={{...estilos.textoPreto, fontSize: tamanhoTextoPreto}}><strong>Nº Cartão SUS:</strong> {dadosPraticante.cartaoSUS}</p>
@@ -47,18 +47,17 @@ const InformacoesPraticante = () => {
           <p style={{...estilos.textoPreto, fontSize: tamanhoTextoPreto}}><strong>Nome da Mãe:</strong> {dadosPraticante.nomeMae}</p>
         </div>
 
-        {/* Observações para a Próxima Sessão */}
         <div style={estilos.section}>
-          <h4 style={{...estilos.tituloVerde, fontSize: tamanhoTituloVerde}}>Observações para a Próxima Sessão</h4>
-          <p style={{...estilos.textoPreto, fontSize: tamanhoTextoPreto}}>{dadosFeedback.observacoesProximaSessao}</p>
+          <h4 style={{...estilos.tituloVerde, fontSize: tamanhoTituloVerde, fontWeight: 'bold'}}>Escolaridade do Praticante</h4>
+          <p style={{...estilos.textoPreto, fontSize: tamanhoTextoPreto}}><strong>Escolaridade do Praticante:</strong> {dadosEscolaridade.escola}</p>
+          <p style={{...estilos.textoPreto, fontSize: tamanhoTextoPreto}}><strong>Ano/Série:</strong> {dadosEscolaridade.anoSerie}</p>
+          <p style={{...estilos.textoPreto, fontSize: tamanhoTextoPreto}}><strong>Turma:</strong> {dadosEscolaridade.turma}</p>
+          <p style={{...estilos.textoPreto, fontSize: tamanhoTextoPreto}}><strong>Período:</strong> {dadosEscolaridade.periodo}</p>
         </div>
 
-        {/* Equipe */}
         <div style={estilos.section}>
-          <p style={{...estilos.textoPreto, fontSize: tamanhoTextoPreto}}><strong>Condutor:</strong> {dadosFeedback.condutor}</p>
-          <p style={{...estilos.textoPreto, fontSize: tamanhoTextoPreto}}><strong>Mediador(es):</strong> {dadosFeedback.mediadores.join(", ")}</p>
-          <p style={{...estilos.textoPreto, fontSize: tamanhoTextoPreto}}><strong>Encilhamento:</strong> {dadosFeedback.encilhamento}</p>
-          <p style={{...estilos.textoPreto, fontSize: tamanhoTextoPreto}}><strong>Cavalo:</strong> {dadosFeedback.cavalo}</p>
+          <h4 style={{...estilos.tituloVerde, fontSize: tamanhoTituloVerde, fontWeight: 'bold'}}>Diagnóstico Clínico</h4>
+          <p style={{...estilos.textoPreto, fontSize: tamanhoTextoPreto, whiteSpace: 'pre-wrap'}}>{diagnosticoClinico}</p>
         </div>
       </div>
     </div>
