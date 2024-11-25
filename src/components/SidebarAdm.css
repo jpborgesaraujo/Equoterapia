@@ -1,8 +1,5 @@
-* {
-    font-family: 'Poppins', sans-serif;
-}
-
 .SidebarAdm {
+    font-family: 'Poppins', sans-serif;
     width: 350px;
     height: 100vh;
     background-color: #f8f9fa;
@@ -14,7 +11,6 @@
 
 .SidebarAdm-toggle {
     display: none;
-    /* Escondido por padrão */
     position: absolute;
     top: 20px;
     left: 20px;
@@ -25,7 +21,7 @@
     color: #333;
 }
 
-.exit-button {
+.SidebarAdm .exit-button {
     background: none;
     border: none;
     outline: none;
@@ -39,11 +35,11 @@
     margin-top: 40px;
 }
 
-.exit-icon {
+.SidebarAdm .exit-icon {
     font-size: 25px;
 }
 
-.username {
+.SidebarAdm .username {
     color: #4E3B31;
     text-align: center;
 }
@@ -68,40 +64,36 @@
     right: 10px;
 }
 
-.active-button {
+.SidebarAdm .active-button {
     background-color: #4E3B31;
     color: white;
 }
 
-.profile-pic {
+.SidebarAdm .profile-pic {
     display: flex;
     justify-content: center;
 }
 
-.profile-pic img {
+.SidebarAdm .profile-pic img {
     width: 100px;
     height: 100px;
     object-fit: cover;
     border-radius: 50%;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .SidebarAdm {
         width: 100%;
         height: 100%;
         transform: translateX(-100%);
         position: fixed;
-        /* Esconde a SidebarAdm fora da tela */
     }
 
     .SidebarAdm.open {
         transform: translateX(0);
-        /* Mostra a SidebarAdm */
     }
 
     .SidebarAdm-toggle {
         display: block;
-        /* Mostra o botão de menu em telas pequenas */
     }
 }

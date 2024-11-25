@@ -2,8 +2,8 @@ import React from 'react';
 import CabecalhoSessao from './CabecalhoSessao';
 
 const FeedbackSessaoAnterior = () => {
-  const tamanhoTituloVerde = '14px';
-  const tamanhoTextoPreto = '16px';
+  const tamanhoTituloVerde = '25px';
+  const tamanhoTextoPreto = '18px';
 
   const dadosFeedback = {
     observacoesGerais: "Houve uma participação ativa nas atividades, com boa coordenação durante os exercícios de equilíbrio...",
@@ -47,10 +47,13 @@ const estilos = {
     padding: '20px',
     maxWidth: '800px',
     margin: 'auto',
+    marginLeft: '10px'
   },
   contentContainer: {
     marginLeft: '10px',
-    marginTop: '30px'
+    marginRight: '20px',
+    marginTop: '30px',
+    marginBottom: '20px'
   },
   section: {
     marginBottom: '20px',
@@ -60,7 +63,7 @@ const estilos = {
     margin: '0'
   },
   textoPreto: {
-    color: 'black',
+    color: '#193238',
     margin: '5px 0'
   }
 };

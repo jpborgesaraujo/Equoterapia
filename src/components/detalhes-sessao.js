@@ -2,8 +2,8 @@ import React from 'react';
 import CabecalhoSessao from './CabecalhoSessao';
 
 const DetalhesSessao = () => {
-  const tamanhoTituloVerde = '16px';
-  const tamanhoTextoPreto = '16px';
+  const tamanhoTituloVerde = '25px';
+  const tamanhoTextoPreto = '18px';
 
   const dadosSessao = {
     condutor: "João Silva",
@@ -40,10 +40,13 @@ const estilos = {
     padding: '20px',
     maxWidth: '800px',
     margin: 'auto',
+    marginLeft: '10px'
   },
   contentContainer: {
     marginLeft: '10px',
-    marginTop: '30px'
+    marginRight: '20px',
+    marginTop: '30px',
+    marginBottom: '20px'
   },
   section: {
     marginBottom: '20px',
@@ -53,7 +56,7 @@ const estilos = {
     margin: '0'
   },
   textoPreto: {
-    color: 'black',
+    color: '#193238',
     margin: '5px 0'
   }
 };

@@ -4,7 +4,6 @@ import { Link, useLocation } from 'react-router-dom';
 const BotaoEfeito = ({ texto }) => {
   const location = useLocation();
   
-  // Define paths based on button text
   const getPath = (buttonText) => {
     switch(buttonText) {
       case "Detalhes da Sessão":
@@ -26,7 +25,7 @@ const BotaoEfeito = ({ texto }) => {
       backgroundColor: 'transparent',
       border: 'none',
       color: isSelected ? '#07C158' : 'black',
-      fontSize: '16px',
+      fontSize: '18px',
       cursor: 'pointer',
       padding: '5px 10px',
       textDecoration: 'none',

@@ -2,14 +2,11 @@ import React, { useState } from 'react';
 import './FotoEstilo.css';
 import foto from "./imgs/foto.jpg"
 import BotaoEfeito from './BotaoEfeito';
-import BotaoVerde from './BotaoArredondado';
-import gear from './imgs/gear.png';
-import { Link } from 'react-router-dom';
 
-const CabecalhoSessao = (props) => {
+const CabecalhoSemBotao = (props) => {
   const [sessionData, setSessionData] = useState({
     numeroSessao: "1",
-    status: "Aberta",
+    status: "Finalizar sessão",
     praticante: {
       nome: "Ana Silva Barbosa",
       idade: "12 anos",
@@ -42,30 +39,6 @@ const CabecalhoSessao = (props) => {
                 </div>
               </div>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <BotaoVerde texto="Finalisar Sessão" to="/FinalizarSessao" />
-              <Link 
-                to="/configuracoes-sessao" 
-                style={{ 
-                  width: '31px', 
-                  height: '35px', 
-                  backgroundColor: 'black', 
-                  border: 'none', 
-                  borderRadius: '10px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  cursor: 'pointer',
-                  textDecoration: 'none'
-                }}
-              >
-                <img 
-                  src={gear} 
-                  alt="icone" 
-                  style={{ width: '25px', height: '25px' }} 
-                />
-              </Link>
-            </div>
           </div>
         </div>
         <div>
@@ -74,7 +47,7 @@ const CabecalhoSessao = (props) => {
           <BotaoEfeito texto="Feedback da Sessão Anterior" to={props.feedbackPath} />
         </div>
       </div>
-      </>
+    </>
   );
 };
 
@@ -84,6 +57,7 @@ const estilos = {
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: '20px',
+    marginLeft: '-10px'
   },
   status: {
     color: 'red',
@@ -101,4 +75,4 @@ const estilos = {
   }
 };
 
-export default CabecalhoSessao;
+export default CabecalhoSemBotao;

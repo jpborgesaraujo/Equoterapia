@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { RxExit } from "react-icons/rx";
-import { Link, useNavigate } from "react-router-dom";  // Importar useNavigate
-import { FaBars } from "react-icons/fa"; // Ícone para abrir a SidebarAdm
+import { Link, useNavigate } from "react-router-dom";
+import { FaBars } from "react-icons/fa";
 import "./SidebarAdm.css";
 
 const SidebarAdm = () => {
   const [activeButton, setActiveButton] = useState(null);
-  const [isSidebarAdmOpen, setIsSidebarAdmOpen] = useState(false); // Estado para controlar a abertura da SidebarAdm
-  const navigate = useNavigate();  // Hook para navegação programática
+  const [isSidebarAdmOpen, setIsSidebarAdmOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleButtonClick = (button) => {
     setActiveButton(button);
@@ -17,17 +17,15 @@ const SidebarAdm = () => {
   };
 
   const toggleSidebarAdm = () => {
-    setIsSidebarAdmOpen(!isSidebarAdmOpen); // Alterna a SidebarAdm entre aberta e fechada
+    setIsSidebarAdmOpen(!isSidebarAdmOpen);
   };
 
   return (
     <>
-      {/* Botão para abrir a SidebarAdm em telas pequenas */}
       <button className="SidebarAdm-toggle" onClick={toggleSidebarAdm}>
         <FaBars />
       </button>
 
-      {/* SidebarAdm */}
       <div className={`SidebarAdm p-3 ${isSidebarAdmOpen ? "open" : ""}`}>
         <Link to="/login" className="btn exit-button d-flex align-items-center">
           <RxExit className="exit-icon me-1 icon-large" />
@@ -49,25 +47,18 @@ const SidebarAdm = () => {
           className={`btn SidebarAdm-button mb-4 fw-bold ${
             activeButton === "agenda" ? "active-button" : "btn-light"
           }`}
-          onClick={() => handleButtonClick("agenda")}  // Atualiza para navegar
+          onClick={() => handleButtonClick("agenda")}
         >
           Acessar Agenda <span className="arrow">&gt;</span>
         </button>
+        
         <button
           className={`btn SidebarAdm-button mb-4 fw-bold ${
-            activeButton === "sessoes" ? "active-button" : "btn-light"
+            activeButton === "equinos" ? "active-button" : "btn-light"
           }`}
-          onClick={() => handleButtonClick("sessoes")}
+          onClick={() => handleButtonClick("equinos")}
         >
-          Próximas Sessões <span className="arrow">&gt;</span>
-        </button>
-        <button
-          className={`btn SidebarAdm-button mb-4 fw-bold ${
-            activeButton === "praticantes" ? "active-button" : "btn-light"
-          }`}
-          onClick={() => handleButtonClick("praticantes")}
-        >
-          Listar Praticantes <span className="arrow">&gt;</span>
+          Listar Equinos <span className="arrow">&gt;</span>
         </button>
       </div>
     </>

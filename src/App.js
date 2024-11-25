@@ -16,6 +16,7 @@ import CabecalhoSessao from "./components/CabecalhoSessao.js";
 import DetalhesSessao from "./components/detalhes-sessao.js"
 import ImformacoesPraticante from "./components/InformacoesPraticante.js";
 import SidebarAdm from "./components/SidebarAdm.js";
+import FinalizarSessao from "./components/FinalizarSessao.js";
 
 function App() {
   return (
@@ -81,6 +82,25 @@ function App() {
           />
 
             <Route
+              path="/FinalizarSessao"
+              element={
+                <div className="app-content">
+                  <Sidebar />
+
+                  <div className="content">
+                  <FinalizarSessao />
+
+                  </div>
+                  
+                  
+                </div>
+
+              }
+          />
+
+
+
+            <Route
               path="/informacoes-praticante"
               element={
                 <div className="app-content">
@@ -109,12 +129,7 @@ function App() {
               path="/SidebarAdm"
               element={
                 <div className="app-content">
-                  <div className="content">
                   <SidebarAdm />
-                  </div>
-                  
-                  
-                  
                 </div>
 
               }
